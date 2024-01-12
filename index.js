@@ -42,7 +42,7 @@ app.get('/add-note', async (req, res) => {
     }
 })
 
-app.get('/book', async (req, res) => {
+app.get('/books', async (req, res) => {
     const book = await Book.find();
     if (book) {
         res.json(book)

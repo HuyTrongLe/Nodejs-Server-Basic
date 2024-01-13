@@ -5,7 +5,7 @@ const Book = require('./models/books');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 mongoose.set('strictQuery', false);
 const connectDB = async () => {
@@ -50,6 +50,8 @@ app.get('/books', async (req, res) => {
         res.send("Something went wrong.");
     }
 });
+
+
 connectDB().then(() => {
     app.listen(PORT, () => {
         console.log(`Listening on port ${PORT}`)

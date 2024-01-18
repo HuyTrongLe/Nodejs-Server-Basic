@@ -1,6 +1,6 @@
 // operations.js
 
-const Promotion = require('./promotions.model');
+const Promotion = require('./models/promotions.model');
 
 exports.createPromotion = async (promotion) => {
   try {
